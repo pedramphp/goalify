@@ -129,6 +129,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="editChanged:" destination="LPU-1O-BCu" eventType="editingChanged" id="UkC-Wj-Iex"/>
                                     <outlet property="delegate" destination="LPU-1O-BCu" id="bNQ-M3-Dvf"/>
                                 </connections>
                             </textField>
@@ -214,6 +215,7 @@
                     <connections>
                         <outlet property="descField" destination="C6T-YA-m5r" id="Mnq-oe-tP0"/>
                         <outlet property="descImage" destination="dhG-nb-qN7" id="iue-QK-Uaa"/>
+                        <outlet property="doneButton" destination="OfO-qP-YA6" id="J8F-SS-Lfk"/>
                         <outlet property="goalNavigationBar" destination="LdJ-fv-JvG" id="uGZ-4n-18f"/>
                         <outlet property="titleField" destination="y4M-8W-C1u" id="dS3-wn-NSb"/>
                         <outlet property="titleImage" destination="VhR-yV-8e5" id="jac-cx-Wvb"/>

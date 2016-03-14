@@ -26,6 +26,7 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     
     var goalIndex: Int?
     var goal: Goal?
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
         
         titleField.autocorrectionType = UITextAutocorrectionType.No
         descField.autocorrectionType = UITextAutocorrectionType.No
+        doneButton.enabled = false
         
         loadContent()
     }
@@ -160,12 +162,22 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     
     }
     
+    @IBAction func editChanged(sender: AnyObject) {
+       
+            if let text = titleField.text where text != ""{
+                doneButton.enabled = true
+            }else {
+                doneButton.enabled = false
+            }
+    }
+    
     func textViewDidBeginEditing(textView: UITextView) {
         if textView.textColor == UIColor.lightGrayColor() {
             textView.text = nil
             textView.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0) /* #333333 */
         }
     }
+    
     
     func popView() {
         self.dismissViewControllerAnimated(true, completion: nil)
