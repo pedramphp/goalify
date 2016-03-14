@@ -39,6 +39,15 @@ class ViewController: UIViewController/*, UITextFieldDelegate */{
         addGrayBoxStyles()
         
         //goalHelper.printGoals()
+        randomGoal = randomGoal ?? nil
+        // try to reassgin
+        if goalHelper.totalGoals() > 0{
+            if randomGoal == nil{
+                randomGoal = goalHelper.getRandomGoal();
+            }
+        } else  {
+            randomGoal = nil
+        }
         
         renderView()
 
@@ -80,6 +89,8 @@ class ViewController: UIViewController/*, UITextFieldDelegate */{
     }
     
     func renderView(){
+
+        
         if let randomGoal = randomGoal {
             grayBox.hidden = false
             goalOfDayLabel.hidden = false

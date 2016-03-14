@@ -36,6 +36,7 @@ class GoalListTableViewController: UITableViewController {
     
     // reload data everytime the view appears
     override func viewWillAppear(animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
         goalListTableView.reloadData()
         
     }
@@ -128,8 +129,17 @@ class GoalListTableViewController: UITableViewController {
         
         if segue.identifier == "homeScreen" || segue.identifier == "addGoal" {
             
+            var animate = false
             // hide the navigation bar in home screen
-            navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: false)
+           
+            if segue.identifier == "addGoal" {
+                animate = true
+                if let destination = segue.destinationViewController as? AddGoalViewController {
+                    destination.source = "listview"
+                }
+            }
+            navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: animate)
+            
             
         } else if segue.identifier == "showGoalDetail" {
             

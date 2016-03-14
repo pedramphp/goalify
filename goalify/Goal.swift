@@ -31,9 +31,11 @@ class GoalHelper {
     
     init() {
         loadGoals()
+        printGoals()
     }
     
     func loadGoals(){
+        goals = []
         let request = NSFetchRequest(entityName: "Goals")
         request.sortDescriptors = [NSSortDescriptor(key: "timestamp", ascending: false)]
         request.returnsObjectsAsFaults = false
@@ -65,7 +67,6 @@ class GoalHelper {
     }
     
     func addGoal(goal: Goal) {
-        
         goals.append(goal)
         
         // updating record in database
@@ -73,10 +74,11 @@ class GoalHelper {
         
         newGoal.setValue(goal.title, forKey: "title")
         newGoal.setValue(goal.desc, forKey: "desc")
-        
+        newGoal.setValue(NSDate(), forKey: "timestamp")
         
         do {
             try context.save()
+            loadGoals()
         } catch {
             print("there was a problem adding a goal")
         }
@@ -143,8 +145,7 @@ class GoalHelper {
     func printGoals() {
         
         for goal in goals {
-            print("Goal Title: " + goal.title)
-            
+            print("Goal Title: \(goal.title) \(goal.timestamp)")
         }
     }
     

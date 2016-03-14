@@ -29,7 +29,7 @@ class GoalDetailViewController: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
-        
+        navigationController?.setNavigationBarHidden(false, animated: false)
         updateView()
 
     }
@@ -99,13 +99,12 @@ class GoalDetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "showEditFlow" {
-            
-            // hide the default navigation bar
-            navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: false)
-         
             if let destination = segue.destinationViewController as? AddGoalViewController {
                 destination.mode = "EDIT"
                 destination.goalIndex = goalIndex
+                // hide the default navigation bar
+                navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
+                
             }
         }
     }

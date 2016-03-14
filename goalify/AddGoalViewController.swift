@@ -22,6 +22,8 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var descImage: UIImageView!
     
     var mode: String = "ADD"
+    var source: String?
+    
     var goalIndex: Int?
     var goal: Goal?
     
@@ -29,6 +31,9 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         setViewStyles()
+        
+        titleField.autocorrectionType = UITextAutocorrectionType.No
+        descField.autocorrectionType = UITextAutocorrectionType.No
         
         loadContent()
     }
@@ -132,9 +137,11 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     
     
     func transitionToListView(){
-        
-        performSegueWithIdentifier("goalAdded", sender: self)
-        
+        if let source = source where source == "listview" {
+            popView()
+        } else {
+            performSegueWithIdentifier("goalAdded", sender: self)
+        }
     }
     
     // when return button has been pressed close keybord
@@ -161,16 +168,25 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     }
     
     func popView() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+        /* if the segue is push then use the below code
         navigationController?.popViewControllerAnimated(true)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        */
     }
     
     
     @IBAction func cancel(sender: AnyObject) {
+
         if mode == "EDIT" {
             popView()
         } else {
-            performSegueWithIdentifier("backToMain", sender: self)
+            if let source = source where source == "listview" {
+                popView()
+            } else {
+                performSegueWithIdentifier("backToMain", sender: self)
+            }
         }
     }
     

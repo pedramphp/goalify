@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jIG-e2-R7v">
-                                <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-1" width="375" height="668"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXC-gG-L3n">
                                 <rect key="frame" x="20" y="220" width="335" height="143"/>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfB-jq-bza">
-                                <rect key="frame" x="20" y="300" width="335" height="21"/>
+                                <rect key="frame" x="20" y="300" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -128,6 +128,9 @@
                                 <color key="textColor" red="0.31764705882352939" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LPU-1O-BCu" id="bNQ-M3-Dvf"/>
+                                </connections>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdJ-fv-JvG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
@@ -323,7 +326,7 @@
                         <outlet property="descText" destination="3lG-1V-B1p" id="jeh-5c-c5l"/>
                         <outlet property="line" destination="aA1-eA-TVN" id="d1D-vN-hIX"/>
                         <outlet property="titleLabel" destination="a3H-6J-VAe" id="ll2-e7-q8V"/>
-                        <segue destination="LPU-1O-BCu" kind="show" identifier="showEditFlow" id="XR4-n6-xLB"/>
+                        <segue destination="LPU-1O-BCu" kind="presentation" identifier="showEditFlow" id="XR4-n6-xLB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0Y-aX-1U0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -334,16 +337,16 @@
         <scene sceneID="vyD-lt-vfB">
             <objects>
                 <tableViewController title="Goal List Table View Controller" id="9Xq-ND-7wC" customClass="GoalListTableViewController" customModule="goalify" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="J1W-TC-EGU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="J1W-TC-EGU">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="fXx-s7-rMT">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="fXx-s7-rMT">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fXx-s7-rMT" id="TFJ-o8-fVv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="tintColor" red="0.0" green="0.70042660359999998" blue="0.89075349510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -368,7 +371,7 @@
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="1kD-QV-RL5">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="LPU-1O-BCu" kind="show" identifier="addGoal" id="pcw-sV-nRa"/>
+                                <segue destination="LPU-1O-BCu" kind="presentation" identifier="addGoal" id="pcw-sV-nRa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -409,8 +412,8 @@
         <image name="bg" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bOY-lZ-zbU"/>
+        <segue reference="MYO-GJ-CiV"/>
+        <segue reference="XR4-n6-xLB"/>
         <segue reference="NL2-ni-GRI"/>
-        <segue reference="xTM-Wz-8no"/>
     </inferredMetricsTieBreakers>
 </document>
