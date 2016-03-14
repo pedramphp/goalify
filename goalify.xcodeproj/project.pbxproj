@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E515D2EC1C8D18F100E4748F /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515D2EB1C8D18F100E4748F /* GoalDetailViewController.swift */; };
+		E515D2EE1C8D2CB500E4748F /* GoalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515D2ED1C8D2CB500E4748F /* GoalListTableViewController.swift */; };
+		E53A94561C92D2B70065138F /* icon-mygoals.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E53A94551C92D2B70065138F /* icon-mygoals.ttf */; };
+		E59B05FD1C8CC72500327C29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B05FC1C8CC72500327C29 /* AppDelegate.swift */; };
+		E59B05FF1C8CC72500327C29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B05FE1C8CC72500327C29 /* ViewController.swift */; };
+		E59B06021C8CC72500327C29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59B06001C8CC72500327C29 /* Main.storyboard */; };
+		E59B06051C8CC72500327C29 /* goalify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E59B06031C8CC72500327C29 /* goalify.xcdatamodeld */; };
+		E59B06071C8CC72500327C29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E59B06061C8CC72500327C29 /* Assets.xcassets */; };
+		E59B060A1C8CC72500327C29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59B06081C8CC72500327C29 /* LaunchScreen.storyboard */; };
+		E59B06151C8CC72500327C29 /* goalifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B06141C8CC72500327C29 /* goalifyTests.swift */; };
+		E59B06201C8CC72500327C29 /* goalifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B061F1C8CC72500327C29 /* goalifyUITests.swift */; };
+		E59B062F1C8CFA2B00327C29 /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B062E1C8CFA2B00327C29 /* AddGoalViewController.swift */; };
+		E59B06311C8CFC1A00327C29 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B06301C8CFC1A00327C29 /* Goal.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E59B06111C8CC72500327C29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E59B05F11C8CC72500327C29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E59B05F81C8CC72500327C29;
+			remoteInfo = goalify;
+		};
+		E59B061C1C8CC72500327C29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E59B05F11C8CC72500327C29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E59B05F81C8CC72500327C29;
+			remoteInfo = goalify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E515D2EB1C8D18F100E4748F /* GoalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
+		E515D2ED1C8D2CB500E4748F /* GoalListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListTableViewController.swift; sourceTree = "<group>"; };
+		E53A94551C92D2B70065138F /* icon-mygoals.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icon-mygoals.ttf"; sourceTree = "<group>"; };
+		E59B05F91C8CC72500327C29 /* goalify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goalify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59B05FC1C8CC72500327C29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E59B05FE1C8CC72500327C29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E59B06011C8CC72500327C29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E59B06041C8CC72500327C29 /* goalify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goalify.xcdatamodel; sourceTree = "<group>"; };
+		E59B06061C8CC72500327C29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E59B06091C8CC72500327C29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E59B060B1C8CC72500327C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E59B06101C8CC72500327C29 /* goalifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goalifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59B06141C8CC72500327C29 /* goalifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalifyTests.swift; sourceTree = "<group>"; };
+		E59B06161C8CC72500327C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E59B061B1C8CC72500327C29 /* goalifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goalifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59B061F1C8CC72500327C29 /* goalifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalifyUITests.swift; sourceTree = "<group>"; };
+		E59B06211C8CC72500327C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E59B062D1C8CE59200327C29 /* testing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testing.playground; sourceTree = "<group>"; };
+		E59B062E1C8CFA2B00327C29 /* AddGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
+		E59B06301C8CFC1A00327C29 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E59B05F61C8CC72500327C29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59B060D1C8CC72500327C29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59B06181C8CC72500327C29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E53A94521C92CF770065138F /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				E53A94551C92D2B70065138F /* icon-mygoals.ttf */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		E59B05F01C8CC72500327C29 = {
+			isa = PBXGroup;
+			children = (
+				E59B05FB1C8CC72500327C29 /* goalify */,
+				E59B06131C8CC72500327C29 /* goalifyTests */,
+				E59B061E1C8CC72500327C29 /* goalifyUITests */,
+				E59B05FA1C8CC72500327C29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E59B05FA1C8CC72500327C29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E59B05F91C8CC72500327C29 /* goalify.app */,
+				E59B06101C8CC72500327C29 /* goalifyTests.xctest */,
+				E59B061B1C8CC72500327C29 /* goalifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E59B05FB1C8CC72500327C29 /* goalify */ = {
+			isa = PBXGroup;
+			children = (
+				E53A94521C92CF770065138F /* resources */,
+				E59B06001C8CC72500327C29 /* Main.storyboard */,
+				E59B05FC1C8CC72500327C29 /* AppDelegate.swift */,
+				E59B05FE1C8CC72500327C29 /* ViewController.swift */,
+				E59B062E1C8CFA2B00327C29 /* AddGoalViewController.swift */,
+				E515D2ED1C8D2CB500E4748F /* GoalListTableViewController.swift */,
+				E515D2EB1C8D18F100E4748F /* GoalDetailViewController.swift */,
+				E59B06061C8CC72500327C29 /* Assets.xcassets */,
+				E59B06081C8CC72500327C29 /* LaunchScreen.storyboard */,
+				E59B060B1C8CC72500327C29 /* Info.plist */,
+				E59B06031C8CC72500327C29 /* goalify.xcdatamodeld */,
+				E59B062D1C8CE59200327C29 /* testing.playground */,
+				E59B06301C8CFC1A00327C29 /* Goal.swift */,
+			);
+			path = goalify;
+			sourceTree = "<group>";
+		};
+		E59B06131C8CC72500327C29 /* goalifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				E59B06141C8CC72500327C29 /* goalifyTests.swift */,
+				E59B06161C8CC72500327C29 /* Info.plist */,
+			);
+			path = goalifyTests;
+			sourceTree = "<group>";
+		};
+		E59B061E1C8CC72500327C29 /* goalifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E59B061F1C8CC72500327C29 /* goalifyUITests.swift */,
+				E59B06211C8CC72500327C29 /* Info.plist */,
+			);
+			path = goalifyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E59B05F81C8CC72500327C29 /* goalify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E59B06241C8CC72500327C29 /* Build configuration list for PBXNativeTarget "goalify" */;
+			buildPhases = (
+				E59B05F51C8CC72500327C29 /* Sources */,
+				E59B05F61C8CC72500327C29 /* Frameworks */,
+				E59B05F71C8CC72500327C29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = goalify;
+			productName = goalify;
+			productReference = E59B05F91C8CC72500327C29 /* goalify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E59B060F1C8CC72500327C29 /* goalifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E59B06271C8CC72500327C29 /* Build configuration list for PBXNativeTarget "goalifyTests" */;
+			buildPhases = (
+				E59B060C1C8CC72500327C29 /* Sources */,
+				E59B060D1C8CC72500327C29 /* Frameworks */,
+				E59B060E1C8CC72500327C29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E59B06121C8CC72500327C29 /* PBXTargetDependency */,
+			);
+			name = goalifyTests;
+			productName = goalifyTests;
+			productReference = E59B06101C8CC72500327C29 /* goalifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E59B061A1C8CC72500327C29 /* goalifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E59B062A1C8CC72500327C29 /* Build configuration list for PBXNativeTarget "goalifyUITests" */;
+			buildPhases = (
+				E59B06171C8CC72500327C29 /* Sources */,
+				E59B06181C8CC72500327C29 /* Frameworks */,
+				E59B06191C8CC72500327C29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E59B061D1C8CC72500327C29 /* PBXTargetDependency */,
+			);
+			name = goalifyUITests;
+			productName = goalifyUITests;
+			productReference = E59B061B1C8CC72500327C29 /* goalifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E59B05F11C8CC72500327C29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Mexo Inc";
+				TargetAttributes = {
+					E59B05F81C8CC72500327C29 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HPA68AE34L;
+					};
+					E59B060F1C8CC72500327C29 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HPA68AE34L;
+						TestTargetID = E59B05F81C8CC72500327C29;
+					};
+					E59B061A1C8CC72500327C29 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HPA68AE34L;
+						TestTargetID = E59B05F81C8CC72500327C29;
+					};
+				};
+			};
+			buildConfigurationList = E59B05F41C8CC72500327C29 /* Build configuration list for PBXProject "goalify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E59B05F01C8CC72500327C29;
+			productRefGroup = E59B05FA1C8CC72500327C29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E59B05F81C8CC72500327C29 /* goalify */,
+				E59B060F1C8CC72500327C29 /* goalifyTests */,
+				E59B061A1C8CC72500327C29 /* goalifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E59B05F71C8CC72500327C29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59B060A1C8CC72500327C29 /* LaunchScreen.storyboard in Resources */,
+				E59B06071C8CC72500327C29 /* Assets.xcassets in Resources */,
+				E53A94561C92D2B70065138F /* icon-mygoals.ttf in Resources */,
+				E59B06021C8CC72500327C29 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59B060E1C8CC72500327C29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59B06191C8CC72500327C29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E59B05F51C8CC72500327C29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59B06051C8CC72500327C29 /* goalify.xcdatamodeld in Sources */,
+				E515D2EC1C8D18F100E4748F /* GoalDetailViewController.swift in Sources */,
+				E59B062F1C8CFA2B00327C29 /* AddGoalViewController.swift in Sources */,
+				E515D2EE1C8D2CB500E4748F /* GoalListTableViewController.swift in Sources */,
+				E59B05FF1C8CC72500327C29 /* ViewController.swift in Sources */,
+				E59B06311C8CFC1A00327C29 /* Goal.swift in Sources */,
+				E59B05FD1C8CC72500327C29 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59B060C1C8CC72500327C29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59B06151C8CC72500327C29 /* goalifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59B06171C8CC72500327C29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59B06201C8CC72500327C29 /* goalifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E59B06121C8CC72500327C29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E59B05F81C8CC72500327C29 /* goalify */;
+			targetProxy = E59B06111C8CC72500327C29 /* PBXContainerItemProxy */;
+		};
+		E59B061D1C8CC72500327C29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E59B05F81C8CC72500327C29 /* goalify */;
+			targetProxy = E59B061C1C8CC72500327C29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E59B06001C8CC72500327C29 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E59B06011C8CC72500327C29 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E59B06081C8CC72500327C29 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E59B06091C8CC72500327C29 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E59B06221C8CC72500327C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E59B06231C8CC72500327C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E59B06251C8CC72500327C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = goalify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mexoinc.goalify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E59B06261C8CC72500327C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = goalify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mexoinc.goalify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E59B06281C8CC72500327C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = goalifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mexoinc.goalifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goalify.app/goalify";
+			};
+			name = Debug;
+		};
+		E59B06291C8CC72500327C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = goalifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mexoinc.goalifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goalify.app/goalify";
+			};
+			name = Release;
+		};
+		E59B062B1C8CC72500327C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = goalifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mexoinc.goalifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = goalify;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E59B062C1C8CC72500327C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = goalifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mexoinc.goalifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = goalify;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E59B05F41C8CC72500327C29 /* Build configuration list for PBXProject "goalify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59B06221C8CC72500327C29 /* Debug */,
+				E59B06231C8CC72500327C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E59B06241C8CC72500327C29 /* Build configuration list for PBXNativeTarget "goalify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59B06251C8CC72500327C29 /* Debug */,
+				E59B06261C8CC72500327C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E59B06271C8CC72500327C29 /* Build configuration list for PBXNativeTarget "goalifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59B06281C8CC72500327C29 /* Debug */,
+				E59B06291C8CC72500327C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E59B062A1C8CC72500327C29 /* Build configuration list for PBXNativeTarget "goalifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59B062B1C8CC72500327C29 /* Debug */,
+				E59B062C1C8CC72500327C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E59B06031C8CC72500327C29 /* goalify.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E59B06041C8CC72500327C29 /* goalify.xcdatamodel */,
+			);
+			currentVersion = E59B06041C8CC72500327C29 /* goalify.xcdatamodel */;
+			path = goalify.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E59B05F11C8CC72500327C29 /* Project object */;
+}
