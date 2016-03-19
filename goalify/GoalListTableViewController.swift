@@ -18,6 +18,13 @@ class GoalListTableViewController: UITableViewController {
         performSegueWithIdentifier("homeScreen", sender: self)
     }
     
+    
+    // disable orientation
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    
     @IBOutlet var goalListTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()

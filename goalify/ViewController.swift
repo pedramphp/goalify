@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 var goalHelper = GoalHelper()
-var randomGoal = goalHelper.getRandomGoal()
+var randomGoal: Goal?
 
 class ViewController: UIViewController/*, UITextFieldDelegate */{
     
@@ -28,26 +28,20 @@ class ViewController: UIViewController/*, UITextFieldDelegate */{
     override func viewWillAppear(animated: Bool) {
        // self.navigationController?.navigationBar.hidden = true
     }
-
-
+    
+    // disable orientation
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        randomGoal = goalHelper.getChosenGoal()
         
         addStarStyles()
         addAddGoalButtonStyles()
         addGrayBoxStyles()
-        
-        //goalHelper.printGoals()
-        randomGoal = randomGoal ?? nil
-        // try to reassgin
-        if goalHelper.totalGoals() > 0{
-            if randomGoal == nil{
-                randomGoal = goalHelper.getRandomGoal();
-            }
-        } else  {
-            randomGoal = nil
-        }
         
         renderView()
 

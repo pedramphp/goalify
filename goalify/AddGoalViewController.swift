@@ -28,6 +28,13 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     var goal: Goal?
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
+    
+    // disable orientation
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,9 +42,16 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
         
         titleField.autocorrectionType = UITextAutocorrectionType.No
         descField.autocorrectionType = UITextAutocorrectionType.No
-        doneButton.enabled = false
         
         loadContent()
+        let text = titleField.text ?? nil
+        if text != nil && text != ""
+        {
+            doneButton.enabled = true
+        } else {
+            doneButton.enabled = false
+        }
+        
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

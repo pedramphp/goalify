@@ -15,6 +15,7 @@ var context: NSManagedObjectContext = appDel.managedObjectContext
 
 
 struct Goal {
+    var id: String = ""
     var title: String = ""
     var desc: String = ""
     var dueDate: NSDate? = nil
@@ -28,6 +29,8 @@ struct Goal {
 class GoalHelper {
     
     var goals: [Goal] = []
+    var chosenGoal: Goal?
+    
     
     init() {
         loadGoals()
@@ -50,6 +53,7 @@ class GoalHelper {
             for record: NSManagedObject in results as! [NSManagedObject]{
                 
                 var goal = Goal()
+                goal.id = NSUUID().UUIDString
                 goal.title = record.valueForKey("title") as? String ?? ""
                 goal.desc = record.valueForKey("desc") as? String ?? ""
                 goal.dueDate = record.valueForKey("dueDate") as? NSDate? ?? nil
@@ -60,14 +64,76 @@ class GoalHelper {
                 goals.append(goal)
             }
             
+            loadChosenGoal()
+            
         }catch {
             print("failed to get items")
         }
         
     }
     
+    func getGoalByGoalId(goalId: String) -> Goal? {
+        for goal in goals {
+            if goal.id == goalId {
+                return goal
+            }
+        }
+        return nil
+    }
+    
+    func loadChosenGoal() -> Goal?{
+        let request = NSFetchRequest(entityName: "Settings")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.executeFetchRequest(request)
+            
+            if results.count == 0 {
+                // if goal doesn't exist add it.
+                insertRandomChosenGoal()
+                return nil
+            }
+            
+            let record = results[0] as! NSManagedObject
+            let goalId: String = record.valueForKey("chosenGoalId") as? String ?? ""
+            chosenGoal = getGoalByGoalId(goalId)
+            if chosenGoal == nil {
+                insertRandomChosenGoal()
+                return nil
+            }
+            return chosenGoal
+            
+        }catch {
+            print("failed to get items")
+        }
+        return nil
+  
+    }
+    
+    func insertRandomChosenGoal(){
+        let goal: Goal? = getRandomGoal()
+        if let goal = goal {
+            updateChosenGoal(goal)
+        } else {
+            chosenGoal = nil
+        }
+    }
+    
+    func updateChosenGoal(goal: Goal) {
+        let settings = NSEntityDescription.insertNewObjectForEntityForName("Settings", inManagedObjectContext: context)
+        
+        settings.setValue(goal.id, forKey: "chosenGoalId")
+        
+        do {
+            try context.save()
+            chosenGoal = goal
+        } catch {
+            print("there was a problem updating settings")
+        }
+
+    }
+    
     func addGoal(goal: Goal) {
-        goals.append(goal)
         
         // updating record in database
         let newGoal = NSEntityDescription.insertNewObjectForEntityForName("Goals", inManagedObjectContext: context)
@@ -158,6 +224,24 @@ class GoalHelper {
         let randomIndex = (arc4random_uniform(UInt32(goalCount - 1)) + 0)
         
         return getGoalByIndex(Int(randomIndex))
+    }
+    
+    func getChosenGoal() -> Goal? {
+        if let chosen = chosenGoal {
+            let goal: Goal? = getGoalByGoalId(chosen.id)
+            // making sure goal exists
+            if goal != nil {
+                return chosenGoal
+            } else  {
+                // if it doesn exist insert random one
+                insertRandomChosenGoal()
+                return chosenGoal
+            }
+        } else {
+            // if it doesn exist insert random one
+            insertRandomChosenGoal()
+            return chosenGoal
+        }
     }
     
 }

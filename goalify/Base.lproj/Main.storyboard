@@ -333,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0Y-aX-1U0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049.5" y="1181.5"/>
+            <point key="canvasLocation" x="1029.5" y="1181.5"/>
         </scene>
         <!--Goal List Table View Controller-->
         <scene sceneID="vyD-lt-vfB">
@@ -414,8 +414,8 @@
         <image name="bg" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MYO-GJ-CiV"/>
-        <segue reference="XR4-n6-xLB"/>
+        <segue reference="bOY-lZ-zbU"/>
         <segue reference="NL2-ni-GRI"/>
+        <segue reference="xTM-Wz-8no"/>
     </inferredMetricsTieBreakers>
 </document>

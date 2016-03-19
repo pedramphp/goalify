@@ -28,6 +28,12 @@ class GoalDetailViewController: UIViewController {
     }
     
     
+    // disable orientation
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    
     override func viewWillAppear(animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: false)
         updateView()
