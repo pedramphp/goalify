@@ -244,6 +244,16 @@ class GoalHelper {
         }
     }
     
+    func getGoalIndexByGoalId(goalId: String) -> Int? {
+        
+        for var index = 0; index < goals.count; ++index {
+            if goals[index].id == goalId {
+                return index
+            }
+        }
+        return nil
+    }
+    
 }
 
 

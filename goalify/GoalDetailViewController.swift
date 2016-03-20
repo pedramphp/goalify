@@ -12,18 +12,21 @@ class GoalDetailViewController: UIViewController {
     
     var goalIndex: Int!
     var goal: Goal?
+    var showMainMenu = false
     
     @IBOutlet weak var descText: UITextView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var line: UIImageView!
     
+    @IBOutlet weak var mainMenu: UIButton!
     @IBOutlet weak var box: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setViewStyles()
         updateView()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -69,6 +72,8 @@ class GoalDetailViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = "Close"
         let edit = UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.Plain, target: self, action: "editTapped")
         self.navigationItem.rightBarButtonItems = [edit]
+        
+        mainMenu.hidden = !showMainMenu
         
         //self.navigationController?.navigationBar.topItem?.leftBarButtonItem?.style = UIBarButtonItemStyle.Plain
         //self.navigationController?.navigationBar.topItem?.hidesBackButton = true

@@ -42,10 +42,15 @@ class ViewController: UIViewController/*, UITextFieldDelegate */{
         addStarStyles()
         addAddGoalButtonStyles()
         addGrayBoxStyles()
+        grayBox.userInteractionEnabled = true
+        grayBox.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onGrayBoxTap"))
         
         renderView()
 
-      //  self.textField.delegate = self;
+    }
+    
+    func onGrayBoxTap() {
+         performSegueWithIdentifier("showDetail", sender: self)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -106,6 +111,21 @@ class ViewController: UIViewController/*, UITextFieldDelegate */{
             
         }
     }
+    
+    // before segue happens
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        if segue.identifier == "showDetail" {
+            if let destination = segue.destinationViewController as? GoalDetailViewController {
+                navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: false)
+                destination.goalIndex = goalHelper.getGoalIndexByGoalId((randomGoal?.id)!)
+                destination.showMainMenu = true
+            }
+        }
+        
+    }
+
     
     /*
     
