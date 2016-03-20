@@ -26,7 +26,7 @@ class ViewController: UIViewController/*, UITextFieldDelegate */{
     @IBOutlet weak var viewAllGoals: UIButton!
     
     override func viewWillAppear(animated: Bool) {
-       // self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.navigationBar.hidden = true
     }
     
     // disable orientation
@@ -36,6 +36,7 @@ class ViewController: UIViewController/*, UITextFieldDelegate */{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationStyle()
         
         randomGoal = goalHelper.getChosenGoal()
         
@@ -47,6 +48,19 @@ class ViewController: UIViewController/*, UITextFieldDelegate */{
         
         renderView()
 
+    }
+    
+    func setNavigationStyle() {
+        if let navController = navigationController {
+            let navbar = navController.navigationBar;
+            navbar.backgroundImageForBarMetrics(UIBarMetrics.Default)
+            navbar.setBackgroundImage(UIImage(named: "bg-navigation"), forBarPosition: UIBarPosition.Top, barMetrics: UIBarMetrics.Default)
+            navbar.translucent = true
+            navbar.tintColor = UIColor.whiteColor()
+            navbar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+            navbar.barStyle = UIBarStyle.BlackTranslucent
+        }
+        self.title = "My Goals"
     }
     
     func onGrayBoxTap() {
